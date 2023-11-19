@@ -15,12 +15,12 @@ jobs:
 
     - name: Update log.md
       run: |
-        echo "$(date) - 贝斯手离开我的第$(( ( $(date -u +%s) - $(date -u -d "2023-09-07" +%s) )/(60*60*24)+1 ))天" >> log.md
+        echo "$(date) - 贝斯手离开我的第 $(( ( $(date -u +%s) - $(date -u -d "2023-09-07" +%s) )/(60*60*24)+1 )) 天" >> log.md
 
     - name: Commit and push
       run: |
         git config --global user.name ${{ secrets.USER_NAME }}
         git config --global user.email ${{ secrets.USER_EMAIL }}
         git add .
-        git commit -m "Auto update log.md"
+        git commit -m "贝斯手离开我的第 $(( ( $(date -u +%s) - $(date -u -d "2023-09-07" +%s) )/(60*60*24)+1 )) 天"
         git push
