@@ -2,7 +2,7 @@ name: Auto Commit
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天 0 点触发
+    - cron: '31 16 * * *'  # 协调世界时(UTC)
   workflow_dispatch:  # 手动触发
 
 env:
