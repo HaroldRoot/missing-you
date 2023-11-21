@@ -18,7 +18,7 @@ jobs:
 
     - name: Update log.md
       run: |
-        echo "$(date) - 贝斯手离开我的第 $(( ( $(date +%s) - $(date -d "2023-09-07" +%s) )/(60*60*24)+1 )) 天" >> log.md
+        echo "$(date) - 贝斯手离开我的第 $(( ( $(date +%s) - $(date -d "2023-09-07" +%s) )/(60*60*24)+1 )) 天  " >> log.md
 
     - name: Commit and push
       run: |
